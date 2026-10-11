@@ -11,6 +11,9 @@
     "algorithm": "sha256",
     "algorithms": ["sha256", "sha384", "sha512"]
   },
+  "json": {
+    "indent": 2
+  },
   "limits": {
     "maxSize": 4096
   }

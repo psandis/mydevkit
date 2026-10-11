@@ -16,6 +16,7 @@ const DEFAULTS_URL = new URL("../../data/defaults.json", import.meta.url);
 export const USER_CONFIG_DIR = ".mydk";
 export const USER_CONFIG_FILE = "config.json";
 export const PROJECT_CONFIG_FILE = ".mydk.json";
+export const MAX_JSON_INDENT = 10;
 
 export interface LoadOptions {
   home?: string;
@@ -136,5 +137,8 @@ export function validate(config: Config, sources: Sources): void {
   }
   if (!algorithms.includes(algorithm)) {
     fail(sources, "hash.algorithm", `must be one of: ${algorithms.join(", ")}.`);
+  }
+  if (!isSize(config.json.indent, MAX_JSON_INDENT)) {
+    fail(sources, "json.indent", `must be an integer between 1 and ${MAX_JSON_INDENT}.`);
   }
 }

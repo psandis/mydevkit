@@ -32,7 +32,12 @@ export function sandbox(): Sandbox {
   };
 }
 
-export async function cli(box: Sandbox, ...args: string[]) {
+export function cli(box: Sandbox, ...args: string[]) {
+  return cliWithStdin(box, undefined, ...args);
+}
+
+/** Runs the CLI with piped stdin. `undefined` behaves like an interactive terminal. */
+export async function cliWithStdin(box: Sandbox, stdin: string | undefined, ...args: string[]) {
   let stdout = "";
   let stderr = "";
   const code = await run(args, {
@@ -44,6 +49,13 @@ export async function cli(box: Sandbox, ...args: string[]) {
     err: (text) => {
       stderr += text;
     },
+    readStdin: async () => stdin,
   });
   return { code, stdout, stderr, line: stdout.trim() };
+}
+
+/** Builds an unsigned-looking JWT from plain objects, for decoding tests. */
+export function makeJwt(header: object, payload: object, signature = "c2lnbmF0dXJl"): string {
+  const part = (value: object) => Buffer.from(JSON.stringify(value)).toString("base64url");
+  return `${part(header)}.${part(payload)}.${signature}`;
 }

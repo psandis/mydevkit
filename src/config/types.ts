@@ -5,6 +5,7 @@ export interface Config {
   pass: { length: number; alphabet: string };
   token: { bytes: number; encoding: TokenEncoding };
   hash: { algorithm: string; algorithms: string[] };
+  json: { indent: number };
   limits: { maxSize: number };
 }
 
