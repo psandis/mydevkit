@@ -1,6 +1,6 @@
 {
   "name": "mydevkit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "mydevkit: small everyday developer tools (passwords, tokens, UUIDs, file hashes)",
   "keywords": [
     "cli",

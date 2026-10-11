@@ -183,6 +183,18 @@ Pipe API responses straight in:
 curl -s https://api.github.com/repos/psandis/mydevkit | mydk json
 ```
 
+Try it with the example files in [`examples/`](examples/) (in the repo, not in the npm package):
+
+```
+$ mydk json examples/sample.json --check
+Valid JSON (examples/sample.json)
+
+$ mydk json examples/broken.json
+mydk: Invalid JSON in examples/broken.json: line 6, column 5: Expected ',' or '}' after property value
+```
+
+`sample.json` is minified on purpose, so `mydk json examples/sample.json` shows the formatting.
+
 ### Decode a JWT
 
 ```

@@ -1,0 +1,9 @@
+{
+  "project": {
+    "name": "mydevkit",
+    "command": "mydk",
+    "version": "0.3.1"
+    "license": "MIT"
+  },
+  "tags": ["cli", "json", "jwt", "crypto"]
+}
