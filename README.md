@@ -1,10 +1,10 @@
 # mydevkit
 
-[![npm version](https://img.shields.io/npm/v/mydk.svg)](https://www.npmjs.com/package/mydk)
+[![npm version](https://img.shields.io/npm/v/mydevkit.svg)](https://www.npmjs.com/package/mydevkit)
 [![node](https://img.shields.io/badge/node-%3E%3D22-brightgreen)](https://nodejs.org)
 [![license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
-A small collection of everyday developer tools in one command. Generate passwords, tokens, and UUIDs, or hash a file, without reaching for a website or a one-off script. Every default is configurable through a JSON config file. The npm package and CLI command are named **mydk**.
+A small collection of everyday developer tools in one command. Generate passwords, tokens, and UUIDs, or hash a file, without reaching for a website or a one-off script. Every default is configurable through a JSON config file. The npm package is **mydevkit**, the command is **mydk**.
 
 ## What It Does
 
@@ -25,7 +25,7 @@ A small collection of everyday developer tools in one command. Generate password
 ## Install
 
 ```bash
-npm install -g mydk
+npm install -g mydevkit
 ```
 
 or, for local development:
