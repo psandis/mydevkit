@@ -1,0 +1,17 @@
+{
+  "pass": {
+    "length": 20,
+    "alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*_-+="
+  },
+  "token": {
+    "bytes": 32,
+    "encoding": "hex"
+  },
+  "hash": {
+    "algorithm": "sha256",
+    "algorithms": ["sha256", "sha384", "sha512"]
+  },
+  "limits": {
+    "maxSize": 4096
+  }
+}
